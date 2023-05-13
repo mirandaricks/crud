@@ -60,17 +60,14 @@ class App extends Component {
           />
           <Route
             path="/editar/:isbnLivro"
-            element={(props) => {
+            render={(props) => {
               const livro = this.state.livros.find(
                 (livro) => livro.isbn === props.match.params.isbnLivro
               );
               if (livro) {
-                return (
-                  <CadastrarLivros
-                    editarLivro={this.editarLivro}
-                    livro={livro}
-                  />
-                );
+                return <CadastrarLivros editar={this.editarLivros} livro={livro} />
+
+
               }else{
                 return <Navigate to={"/"} />
               }
