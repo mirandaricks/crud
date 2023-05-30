@@ -9,7 +9,7 @@ const Menu = (props) => {
           <Link to="/">Home</Link>
         </li>
         <li>
-          <Link to="/records">Novo</Link>
+          <Link to="/cadastrar">Novo</Link>
         </li>
       </ul>
     </nav>
